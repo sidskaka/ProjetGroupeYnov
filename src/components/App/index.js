@@ -17,7 +17,7 @@ function App() {
               <Route path="/signup" component={Signup} />
               <Route component={Error} />
           </Switch>
-          <Footer />
+      <Footer />
     </Router>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const chatBot = () => {
+const ChatBot = () => {
     return (
         <Container>
             chatBot
@@ -13,4 +13,4 @@ const Container = styled.div`
     
 `
 
-export default chatBot
+export default ChatBot

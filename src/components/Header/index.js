@@ -6,8 +6,11 @@ import {
 } from './style.js'
 import logo from '../../images/logo.png'
 import login from '../../images/login.png'
+import logout from '../../images/logout.png'
+import Logout from '../Logout'
 
 const Header = () => {
+    console.log(Logout)
     return (
         <Div>
             <Div1>
@@ -27,6 +30,7 @@ const Header = () => {
                 <I className="fa fa-search" aria-hidden="true"></I>
             </Div3>
             <Div4>
+                <a href="/logout"><Img1 src={logout} /></a>
                 <a href="/login"><Img1 src={login} /></a>
             </Div4>
         </Div>

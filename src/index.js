@@ -4,10 +4,13 @@ import './index.css';
 import App from './components/Config/App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import Firebase, { FirebaseContext } from './components/Firebase'
 
 ReactDOM.render(
-  <React.StrictMode>
-        <App />
+    <React.StrictMode>
+        <FirebaseContext.Provider value={ new Firebase() }>
+            <App />
+        </FirebaseContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

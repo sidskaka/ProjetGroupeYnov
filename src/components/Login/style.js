@@ -74,3 +74,7 @@ export const Div1 = styled.div`
     width: 100%;
     margin-top: 3%;
 `
+export const StyledError = styled.span`
+    font-size: 112%;
+    color: #ff0000;
+`

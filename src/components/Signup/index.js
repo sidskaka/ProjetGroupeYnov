@@ -1,48 +1,98 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {
     Div, StyledForm, StyledSpan,
     SigninInput, SigninButton,
-    Div1, A
+    Div1, A, StyledError
 } from './style'
+import {FirebaseContext} from '../Firebase'
 import { useHistory } from 'react-router-dom'
 
-const Signup = ({ submit }) => {
-    const [formState, setFormState] = useState({
-        username: '',
-        password: ''
-    })
-    const [errorMessage, setErrorMessage] = useState()
+const Signup = () => {
     const history = useHistory()
+    const firebase = useContext(FirebaseContext)
+    console.log(firebase)
+    const data = {
+        username: '',
+        email: '',
+        password: '',
+        passwordConfirm: ''
+    }
+
+    const [submit, setSubmit] = useState(data)
+    const [error, setError] = useState('')
+
+    const handleChange = e => {
+        setSubmit({
+            ...submit, [e.target.id]: e.target.value
+        })
+    }
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        const { email, password } = submit
+
+        firebase.signupCustomer(email, password)
+            .then(user => {
+                console.log(user.user.refreshToken)
+                setSubmit({ ...data })
+                localStorage.setItem('token', user.user.refreshToken)
+                history.push('/')
+            })
+            .catch(err => {
+                console.log(err)
+                setError(err)
+                setSubmit({ ...data })
+            })
+    }
+
+    const { username, email, password, passwordConfirm } = submit;
+
+    const submitButton = username === '' || email === '' || password === '' || password !== passwordConfirm ?
+        <SigninButton type='submit' disabled>Connexion</SigninButton> : <SigninButton type='submit'>Connexion</SigninButton>;
+
+    const Error = error !== '' && <StyledError>{error.message}</StyledError>
+
+    console.log(Error)
 
     return (
         <Div>
-            <StyledForm onSubmit={e => submit(e, formState, setErrorMessage, history)}>
+            <StyledForm onSubmit={handleSubmit}>
                 <StyledSpan>Sign up</StyledSpan>
                 <SigninInput
+                    id='username'
+                    value={username}
+                    onChange={handleChange}
                     placeholder='Username'
-                    onChange={e => setFormState({ ...formState, username: e.target.value })}
                     type='text'
                 />
 
                 <SigninInput
+                    id='email'
+                    value={email}
+                    onChange={handleChange}
                     placeholder='Email'
-                    onChange={e => setFormState({ ...formState, email: e.target.value })}
                     type='email'
                 />
 
                 <SigninInput
+                    id='password'
+                    value={password}
+                    onChange={handleChange}
                     placeholder='Password'
-                    onChange={e => setFormState({ ...formState, password: e.target.value })}
                     type='password'
                 />
 
                 <SigninInput
+                    id='passwordConfirm'
+                    value={passwordConfirm}
+                    onChange={handleChange}
                     placeholder='Password confirmed'                    
                     type='password'
                 />
 
-                <StyledSpan>{errorMessage}</StyledSpan>
-                <SigninButton type='submit'>Connexion</SigninButton>
+                {Error}
+                {submitButton}
+                
             </StyledForm>
             <Div1>
                 <A href="/login">Deja membre ? Veuillez-vous connecter</A>

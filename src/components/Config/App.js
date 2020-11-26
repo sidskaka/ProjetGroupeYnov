@@ -5,6 +5,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import login from '../../screens/login';
 import Signup from '../Signup';
+import Logout from '../Logout';
 import Error from '../Error';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
               <Route exact path="/" component={Accueil} />
               <Route path="/login" component={login} />
               <Route path="/signup" component={Signup} />
+              <Route path="/logout" component={Logout} />
               <Route component={Error} />
           </Switch>
           <Footer />

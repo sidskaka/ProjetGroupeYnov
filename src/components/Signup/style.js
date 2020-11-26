@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const StyledError = styled.span`
+    font-size: 112%;
+    color: #ff0000;
+`
 export const Div = styled.div`
     width: 100%;
     padding-bottom: 7%;

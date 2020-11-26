@@ -9,7 +9,6 @@ import {
 const Recipes = ({ articles }) => {
     const favorite = localStorage.getItem('token') ?
             <Div231>< A href="#"><I className="fa fa-heart"></I></A></Div231> : "";
-
     return (
         <Ul>
 

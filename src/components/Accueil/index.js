@@ -11,7 +11,6 @@ const Accueil = () => {
     const [articlesPerPage,] = useState(8)
 
     useEffect(() => {
-
         setLoading(true)
         axios({
             method: 'GET',

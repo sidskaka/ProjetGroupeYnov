@@ -7,10 +7,9 @@ import {
 import logo from '../../images/logo.png'
 import login from '../../images/login.png'
 import logout from '../../images/logout.png'
-import Logout from '../Logout'
+//import Logout from '../Logout'
 
 const Header = () => {
-    console.log(Logout)
     return (
         <Div>
             <Div1>

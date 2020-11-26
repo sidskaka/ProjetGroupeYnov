@@ -41,7 +41,7 @@ const Login = () => {
       .then(user => {
         console.log(user)
         setSubmit({ ...data })
-        //localStorage.setItem('token', user.user.refreshToken)
+        localStorage.setItem('token', user.user.refreshToken)
         history.push('/')
       })
       .catch(err => {

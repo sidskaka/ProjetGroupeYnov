@@ -102,6 +102,36 @@ export const I = styled.i`
     @media only screen and (max-width:327px) {
         margin-left: -65%;
     }
+    @media only screen and (max-width:243px) {
+        margin-left: -79%;
+    }
+    @media only screen and (max-width:195px) {
+        margin-left: -98%;
+    }
+    @media only screen and (max-width:160px) {
+        margin-left: -115%;
+    }
+    @media only screen and (max-width:122px) {
+        margin-left: -150%;
+    }
+    @media only screen and (max-width:104px) {
+        margin-left: -176%;
+    }
+    @media only screen and (max-width:94px) {
+        margin-left: -213%;
+    }
+    @media only screen and (max-width:83px) {
+        margin-left: -270%;
+    }
+    @media only screen and (max-width:70px) {
+        margin-left: -303%;
+    }
+    @media only screen and (max-width:64px) {
+        margin-left: -351%;
+    }
+    @media only screen and (max-width:57px) {
+        margin-left: -422%;
+    }
 `
 export const Img1 = styled.img`
     width: 20%;

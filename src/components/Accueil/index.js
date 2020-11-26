@@ -11,6 +11,7 @@ const Accueil = () => {
     const [articlesPerPage,] = useState(8)
 
     useEffect(() => {
+
         setLoading(true)
         axios({
             method: 'GET',
@@ -41,7 +42,7 @@ const Accueil = () => {
             <Global />
             {PageLoading}
             <div>
-
+                
                 <Articles articles={currentArticles} />
                 <Pagination articlesPerPage={articlesPerPage} totalArticles={articles.length} paginate={paginate} />
 

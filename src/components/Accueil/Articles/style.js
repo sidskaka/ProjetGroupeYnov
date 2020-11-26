@@ -1,5 +1,4 @@
 import styled from "styled-components";
-//import pixelscreen from "../../utils/pixelscreen";
 
 export const Img = styled.img`
     max-width: 100%;
@@ -33,7 +32,6 @@ export const Ul = styled.ul`
     
     @media only screen and (min-width : 320px) {
         
-
     }
     @media only screen and (min-width : 480px) {
         margin: 1%;
@@ -81,12 +79,18 @@ export const Div1 = styled.div`
     }
     @media only screen and (max-width : 480px) {
         
+    }
+    @media only screen and (max-width : 320px) {        
 
     }
-    @media only screen and (max-width : 320px) {
-        
-
-    }
+`
+export const I = styled.i`
+    font-size: 170%;
+`
+export const A = styled.a`
+    text-decoration: none;
+    display: block;
+    padding: 18%;
 `
 export const A1 = styled.a`
     text-decoration: none;
@@ -97,39 +101,16 @@ export const Div21 = styled.div`
     width: 100%;
     text-transform: uppercase;
 `
-export const A = styled.a`
-    color: #000;
+export const Button = styled.button`
+    border-radius: 13px;
+    background-color: inherit;
 `
-export const Span1 = styled.span`
-    color: #ea2e49;
-    text-decoration: line-through;
-
-    @media only screen and (min-width : 320px) {
-        
-    }
-`
-export const Span3 = styled.span`
-    float: right;
-    width: 100px;
-    height: 20px;
-    overflow: hidden;
-    background: url(https://bit.ly/1B4PjyM) top left no-repeat;
-    background-position: 0 76%;
-
-    @media only screen and (min-width : 320px) {
-        
-    }
-    @media only screen and (min-width : 480px) {
-        width: 100%;
-        background-position: center 76%;
-        margin-bottom: 5px;
-    }
-    @media only screen and (max-width : 480px) {
-        
-    }
-    @media only screen and (max-width : 320px) {
-        
-    }
+export const Div231 = styled.div`
+    width: 19%;
+    background-color: #ccc;
+    height: 39px;
+    border-radius: 19px;
+    margin-left: 40%;
 `
 export const Div23 = styled.div`
     @media only screen and (min-width : 480px) {
@@ -159,29 +140,21 @@ export const H5 = styled.h5`
 export const P = styled.p`
     @media (min-width : 320px) {
         
-
     }
 `
-
 export const Div2 = styled.div`
     @media only screen and (min-width : 320px) {
         
-
     }
     @media only screen and (max-width : 480px) {
         
-
     }
-    @media only screen and (max-width : 320px) {
-        
+    @media only screen and (max-width : 320px) {       
 
-    }
-    //
-    
+    }    
 `
 export const Div22 = styled.div`
-    @media (min-width : 320px) {
-        
+    @media (min-width : 320px) {    
 
     }
     @media only screen and (min-width : 480px) {
@@ -189,25 +162,8 @@ export const Div22 = styled.div`
     }
     @media only screen and (max-width : 480px) {
         
-
     }
     @media only screen and (max-width : 320px) {
         
-
     }
 `
-export const Span2 = styled.span`
-    @media only screen and (min-width : 320px) {
-        
-
-    }
-`
-
-
-
-
-
-
-
-
-

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {   } from 'react';
 import {
-    Span3, Span1, Div21,
-    Img, Div1, Li, Ul,
-    A1, A, P,
-    Div23, Div2,
-    H5, Span2, Div22,
+    Div21, Img,
+    Div1, Li, Ul, A1, I,
+    P, Div23, Div2, A,
+    H5, Div22, Div231
 } from './style'
 
 const Recipes = ({ articles }) => {
+    const favorite = localStorage.getItem('token') ?
+            <Div231>< A href="#"><I className="fa fa-heart"></I></A></Div231> : "";
 
     return (
         <Ul>
@@ -24,11 +25,9 @@ const Recipes = ({ articles }) => {
                             <H5>{article.title.substr(0, 15)}...</H5>
                         </Div21>
                         <Div23>
-                            <A href="#">
-                                <Span1>$79.99</Span1>
-                                <Span2>$69.99</Span2>
-                            </A>
-                            <Span3 className="product_rating"></Span3>
+
+                            {favorite}
+
                         </Div23>
                         <Div22>
                             <P>{article.description.substr(0, 100)}...</P>

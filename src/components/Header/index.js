@@ -16,7 +16,7 @@ const Header = () => {
             <Div2>
                 <Nav>
                     <Ul>
-                        <Li><A href="#">Accueil</A></Li>
+                        <Li><A href="/">Accueil</A></Li>
                         <Li><A href="#">A propos</A></Li>
                         <Li><A href="#">Contact</A></Li>
                     </Ul>
@@ -27,7 +27,7 @@ const Header = () => {
                 <I className="fa fa-search" aria-hidden="true"></I>
             </Div3>
             <Div4>
-                <Img1 src={login} />
+                <a href="/login"><Img1 src={login} /></a>
             </Div4>
         </Div>
     )

@@ -40,7 +40,7 @@ const Accueil = () => {
 
   const PageLoading = loading ? <h1>Chargement de la page ...</h1> : ''
   return (
-    <Div>
+    <Div style={{marginLeft: '8%'}}>
       <Global />
       {PageLoading}
       <div>

@@ -1,9 +1,6 @@
 import React from 'react'
 import error from '../../images/Error.png'
-import {
-  Div, Div1, Span1,
-  Span2, Div2, Img
-} from './style'
+import { Div, Div1, Span1, Span2, Div2, Img } from './style'
 
 const Error = () => {
   return (

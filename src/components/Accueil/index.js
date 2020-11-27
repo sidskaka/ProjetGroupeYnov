@@ -43,7 +43,7 @@ const Accueil = () => {
     <Div>
       <Global />
       {PageLoading}
-      <div>               
+      <div>
         <Articles articles={currentArticles} />
         <Pagination
           articlesPerPage={articlesPerPage}

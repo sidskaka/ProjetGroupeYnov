@@ -6,7 +6,7 @@ export const MyFooter = styled.footer`
     font-size:15px;
     line-height:24px;
     color:#737373;
-    margin-top: 0%;
+    margin-top: 4%;
     height: 330px;
     @media only screen and (max-width:1199px) {
         height: 340px;

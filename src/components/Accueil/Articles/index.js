@@ -1,14 +1,28 @@
-import React, {   } from 'react';
+import React, { } from 'react';
+import axios from 'axios'
 import {
     Div21, Img,
     Div1, Li, Ul, A1, I,
     P, Div23, Div2, A,
-    H5, Div22, Div231
+    H5, Div22, Div231, Div232
 } from './style'
 
+const favorisClick = (id) => {
+    localStorage.setItem('id', id)
+    axios({
+        method: 'GET',
+        url: `https://fakestoreapi.com/products/${id}`
+    })
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+
 const Recipes = ({ articles }) => {
-    const favorite = localStorage.getItem('token') ?
-            <Div231>< A href="#"><I className="fa fa-heart"></I></A></Div231> : "";
+    
     return (
         <Ul>
 
@@ -24,8 +38,13 @@ const Recipes = ({ articles }) => {
                             <H5>{article.title.substr(0, 15)}...</H5>
                         </Div21>
                         <Div23>
-
-                            {favorite}
+                            {
+                                localStorage.getItem('token') ?
+                                    <div>
+                                        <Div231><A onClick={ () => favorisClick(article.id) }><I className="fa fa-heart"></I></A></Div231>
+                                        <Div232><A href="#"><I className="fa fa-shopping-basket"></I></A></Div232>
+                                    </div> : ""
+                            }
 
                         </Div23>
                         <Div22>

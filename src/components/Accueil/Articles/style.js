@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Img = styled.img`
   max-width: 100%;
   height: auto;
 
   display: block;
-  -webkit-transition: all .35s ease-in-out;
-  -moz-transition: all .35s ease-in-out;
-  transition: all .35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 
   &:hover {
     -o-transform: scale(1.2, 1.2);
@@ -17,7 +17,7 @@ export const Img = styled.img`
     transform: scale(1.2, 1.2);
   }
 
-  @media only screen and (min-width : 480px) {
+  @media only screen and (min-width: 480px) {
     max-height: 100%;
     display: inline-block;
   }
@@ -29,8 +29,8 @@ export const Ul = styled.ul`
   margin: 0;
   padding: 0;
   width: 100%;
-    
-  @media only screen and (min-width : 480px) {
+
+  @media only screen and (min-width: 480px) {
     margin: 1%;
   }
 `
@@ -41,17 +41,17 @@ export const Li = styled.li`
   padding: 10px;
   position: relative;
 
-  @media only screen and (min-width : 480px) {
+  @media only screen and (min-width: 480px) {
     width: 49%;
     margin: 1%;
   }
   @media only screen and (min-width: 678px) {
     width: 32.5%;
   }
-  @media only screen and (min-width : 992px) {
+  @media only screen and (min-width: 992px) {
     width: 24.25%;
   }
-  @media only screen and (min-width : 1200px) {
+  @media only screen and (min-width: 1200px) {
     width: 19.5%;
   }
 `
@@ -63,7 +63,7 @@ export const Div1 = styled.div`
     bottom: 0;
   }
 
-  @media only screen and (min-width : 480px) {
+  @media only screen and (min-width: 480px) {
     height: 300px;
     float: left;
     width: 100%;
@@ -108,14 +108,14 @@ export const Div232 = styled.div`
   margin-top: -15%;
 `
 export const Div23 = styled.div`
-  @media only screen and (min-width : 480px) {
+  @media only screen and (min-width: 480px) {
     float: left;
     text-align: center;
     width: 100%;
   }
 `
 export const H5 = styled.h5`
-  @media only screen and (min-width : 480px) {
+  @media only screen and (min-width: 480px) {
     font-size: 1.1em;
     font-weight: 500;
     line-height: 1;
@@ -123,14 +123,10 @@ export const H5 = styled.h5`
     text-align: center;
   }
 `
-export const P = styled.p`
-  
-`
-export const Div2 = styled.div`
-   
-`
+export const P = styled.p``
+export const Div2 = styled.div``
 export const Div22 = styled.div`
-  @media only screen and (min-width : 480px) {
+  @media only screen and (min-width: 480px) {
     text-align: center;
   }
 `

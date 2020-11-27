@@ -38,29 +38,30 @@ const Login = () => {
 
     firebase
       .loginCustomer(email, password)
-        .then(user => {
-          console.log(user)
-          setSubmit({ ...data })
-          localStorage.setItem('token', user.user.refreshToken)
-          history.push('/')
-          location.reload()
-        })
-        .catch(err => {
-          console.log(err)
-          setError(err)
-          setSubmit({ ...data })
-        })
+      .then(user => {
+        console.log(user)
+        setSubmit({ ...data })
+        localStorage.setItem('token', user.user.refreshToken)
+        history.push('/')
+        location.reload()
+      })
+      .catch(err => {
+        console.log(err)
+        setError(err)
+        setSubmit({ ...data })
+      })
   }
 
   const { email, password } = submit
 
-  const submitButton = email === '' || password === '' ? (
-    <SigninButton type='submit' disabled>
-      Connexion
-    </SigninButton>
-  ) : (
-    <SigninButton type='submit'>Connexion</SigninButton>
-  )
+  const submitButton =
+    email === '' || password === '' ? (
+      <SigninButton type='submit' disabled>
+        Connexion
+      </SigninButton>
+    ) : (
+      <SigninButton type='submit'>Connexion</SigninButton>
+    )
 
   const Error = error !== '' && <StyledError>{error.message}</StyledError>
 
@@ -85,10 +86,8 @@ const Login = () => {
           placeholder='mot de passe'
           type='password'
         />
-
         {Error}
         {submitButton}
-
       </StyledForm>
       <Div1>
         <A href='/signup'>Nouveau ? Inscrivez-vous maintenent</A>

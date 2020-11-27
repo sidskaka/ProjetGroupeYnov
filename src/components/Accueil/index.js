@@ -39,20 +39,20 @@ const Accueil = () => {
   const paginate = pageNumber => setCurrentPage(pageNumber)
 
   const PageLoading = loading ? <h1>Chargement de la page ...</h1> : ''
-    return (
-      <Div className='teste'>
-        <Global />
-        {PageLoading}
-        <div>
-          <Articles articles={currentArticles} />
-          <Pagination
-            articlesPerPage={articlesPerPage}
-            totalArticles={articles.length}
-            paginate={paginate}
-          />
-        </div>
-      </Div>
-    )
+  return (
+    <Div className='teste'>
+      <Global />
+      {PageLoading}
+      <div>
+        <Articles articles={currentArticles} />
+        <Pagination
+          articlesPerPage={articlesPerPage}
+          totalArticles={articles.length}
+          paginate={paginate}
+        />
+      </div>
+    </Div>
+  )
 }
 
 export default Accueil

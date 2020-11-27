@@ -177,7 +177,7 @@ export const A3 = styled.a`
   }
   &:focus {
     color: #fff;
-    background-color: #29aafe
+    background-color: #29aafe;
   }
 `
 export const A4 = styled.a`
@@ -185,7 +185,7 @@ export const A4 = styled.a`
 
   background-color: #eceeef;
   color: #818a91;
-  font-size:16px;
+  font-size: 16px;
   display: inline-block;
   line-height: 44px;
   width: 44px;
@@ -207,16 +207,16 @@ export const A4 = styled.a`
   &:hover {
     color: #3366cc;
     text-decoration: none;
-      background-color: #007bb6;
-    }
-    &:active {
-      color: #fff;
-      background-color: #29aafe;
-    }
-    &:focus {
-      color: #fff;
-      background-color: #29aafe;
-    }
+    background-color: #007bb6;
+  }
+  &:active {
+    color: #fff;
+    background-color: #29aafe;
+  }
+  &:focus {
+    color: #fff;
+    background-color: #29aafe;
+  }
 `
 export const Ul1 = styled.ul`
   padding-left: 0;
@@ -293,7 +293,7 @@ export const Div11 = styled.div`
   margin-left: -15px;
   @media only screen and (max-width: 790px) {
     width: 67%;
-  }   
+  }
   @media only screen and (max-width: 670px) {
     padding: 1%;
   }
@@ -400,7 +400,7 @@ export const Div21 = styled.div`
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-    
+
   @media (min-width: 992px) {
     width: 66.66666667%;
     float: left;

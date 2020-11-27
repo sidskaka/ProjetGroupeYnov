@@ -15,15 +15,15 @@ class Firebase {
   constructor() {
     app.initializeApp(config)
 
-      this.auth = app.auth()
+    this.auth = app.auth()
   }
 
   // Inscription d'un utilisateur
   signupCustomer = (email, password) =>
-  this.auth.createUserWithEmailAndPassword(email, password)
+    this.auth.createUserWithEmailAndPassword(email, password)
   // Connexion d'un utilisateur
   loginCustomer = (email, password) =>
-  this.auth.signInWithEmailAndPassword(email, password)
+    this.auth.signInWithEmailAndPassword(email, password)
   // Déconnexion d'un utilisateur
   signoutCustomer = () => this.auth.signOut()
 }

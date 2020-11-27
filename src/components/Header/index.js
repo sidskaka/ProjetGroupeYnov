@@ -30,24 +30,25 @@ const Header = () => {
     firebase.signoutCustomer()
     localStorage.removeItem('token')
     history.push('/')
-    history.go(0)        
+    history.go(0)
   }
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
       setStateLocal(true)
-    }           
+    }
   })
 
   const button = stateLocal ? (
-    <a title="Déconnexion" onClick={handleClick}>
+    <a title='Déconnexion' onClick={handleClick}>
       <Img1 src={logout} />
-    </a>) :
-    (
-      <a title="Connexion" href="/login">
-        <Img1 src={login} />
-      </a>
-    )
+    </a>
+  ) :
+  (
+    <a title='Connexion' href='/login'>
+      <Img1 src={login} />
+    </a>
+  )
 
   return (
     <Div>
@@ -68,10 +69,11 @@ const Header = () => {
             </Li>
             {localStorage.getItem('token') ? (
               <Li>
-                <A href="/favoris">FAVORIS</A>
-              </Li>) :
-              ('')
-            }
+                <A href='/favoris'>FAVORIS</A>
+              </Li>
+             ) : (
+               ''
+             )}
           </Ul>
         </Nav>
       </Div2>
@@ -79,9 +81,7 @@ const Header = () => {
         <Input type='text' placeholder='Search...' />
         <I className='fa fa-search' aria-hidden='true'></I>
       </Div3>
-      <Div4>
-        { button }  
-      </Div4>
+      <Div4>{ button }</Div4>
     </Div>
   )
 }

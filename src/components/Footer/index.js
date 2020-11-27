@@ -120,7 +120,6 @@ const Footer = () => {
               </Li2>
             </Ul2>
           </Div22>
-
         </Div2>
       </Div6>
     </MyFooter>

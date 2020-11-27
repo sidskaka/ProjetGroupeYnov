@@ -40,10 +40,10 @@ const Accueil = () => {
 
   const PageLoading = loading ? <h1>Chargement de la page ...</h1> : ''
   return (
-    <Div className='teste'>
+    <Div className='teste1'>
       <Global />
       {PageLoading}
-      <div>
+      <div className='teste'>
         <Articles articles={currentArticles} />
         <Pagination
           articlesPerPage={articlesPerPage}

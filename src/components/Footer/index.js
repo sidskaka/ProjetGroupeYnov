@@ -99,7 +99,7 @@ const Footer = () => {
             <P>Copyright &copy; 2017 All Rights Reserved.</P>
           </Div21>
 
-          <Div22 className=''>
+          <Div22>
             <Ul2>
               <Li2>
                 <A1 className='facebook' href='#'>

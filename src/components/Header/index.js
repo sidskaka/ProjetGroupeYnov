@@ -30,8 +30,6 @@ const Header = () => {
 
   const [stateLocal, setStateLocal] = useState(false)
 
-  console.log(localStorage)
-
   const handleClick = () => {
     firebase.signoutCustomer()
     localStorage.removeItem('token')

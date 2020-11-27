@@ -3,6 +3,7 @@ import axios from 'axios'
 import Global from '../../styles/global'
 import Articles from './Articles'
 import Pagination from './Pagination'
+import { Div } from './style.js'
 
 const Accueil = () => {
   const [articles, setArticles] = useState([])
@@ -25,7 +26,6 @@ const Accueil = () => {
         console.log(err)
       })
   }, [])
-  //console.log(articles)
 
   // Get current posts
   const indexOfLastArticle = currentPage * articlesPerPage
@@ -40,7 +40,7 @@ const Accueil = () => {
 
   const PageLoading = loading ? <h1>Chargement de la page ...</h1> : ''
   return (
-    <div style={{ marginLeft: '7%' }}>
+    <Div className='teste'>
       <Global />
       {PageLoading}
       <div>
@@ -51,7 +51,7 @@ const Accueil = () => {
           paginate={paginate}
         />
       </div>
-    </div>
+    </Div>
   )
 }
 

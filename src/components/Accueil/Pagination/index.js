@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
+/* eslint react/prop-types: 0 */
 import React from 'react'
-import { Nav, Ul, Li, A } from './style'
+import { Nav, Ul, Li, A, Div } from './style'
 
 const Pagination = ({ articlesPerPage, totalArticles, paginate }) => {
   const pageNumbers = []
@@ -10,7 +10,7 @@ const Pagination = ({ articlesPerPage, totalArticles, paginate }) => {
   }
 
   return (
-    <div style={{ marginTop: '2%' }}>
+    <Div>
       <Nav>
         <Ul>
           {pageNumbers.map(number => (
@@ -28,7 +28,7 @@ const Pagination = ({ articlesPerPage, totalArticles, paginate }) => {
           ))}
         </Ul>
       </Nav>
-    </div>
+    </Div>
   )
 }
 

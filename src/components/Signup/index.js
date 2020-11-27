@@ -105,7 +105,6 @@ const Signup = () => {
           placeholder='Password confirmed'
           type='password'
         />
-
         {Error}
         {submitButton}
       </StyledForm>

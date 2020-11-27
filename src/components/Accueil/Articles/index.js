@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React from 'react'
 import axios from 'axios'
 import {
@@ -24,12 +25,12 @@ const favorisClick = id => {
     method: 'GET',
     url: `https://fakestoreapi.com/products/${id}`
   })
-  .then(res => {
-    console.log(res)
-  })
-  .catch(err => {
-    console.log(err)
-  })
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err => {
+      console.log(err)
+    })
 }
 
 const Recipes = ({ articles }) => {

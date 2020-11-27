@@ -16,7 +16,7 @@ const isLocalhost = Boolean(
     window.location.hostname === '[::1]' ||
     // 127.0.0.0/8 are considered localhost for IPv4.
     window.location.hostname.match(
-        /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 )
 
@@ -36,7 +36,7 @@ export function register(config) {
 
       if (isLocalhost) {
         // This is running on localhost. Let's check if a service worker still exists or not.
-        checkValidServiceWorker(swUrl, config);
+        checkValidServiceWorker(swUrl, config)
 
         // Add some additional logging to localhost, pointing developers to the
         // service worker/PWA documentation.
@@ -105,7 +105,7 @@ function checkValidServiceWorker(swUrl, config) {
   })
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
-      const contentType = response.headers.get('content-type');
+      const contentType = response.headers.get('content-type')
       if (
         response.status === 404 ||
         (contentType != null && contentType.indexOf('javascript') === -1)
@@ -125,7 +125,7 @@ function checkValidServiceWorker(swUrl, config) {
       console.log(
         'No internet connection found. App is running in offline mode.'
       )
-    });
+    })
 }
 
 export function unregister() {

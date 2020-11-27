@@ -102,7 +102,7 @@ const Signup = () => {
           id='passwordConfirm'
           value={passwordConfirm}
           onChange={handleChange}
-          placeholder='Password confirmed'                    
+          placeholder='Password confirmed'
           type='password'
         />
         {Error}

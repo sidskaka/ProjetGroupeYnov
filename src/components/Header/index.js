@@ -71,7 +71,7 @@ const Header = () => {
                 <A href='/favoris'>FAVORIS</A>
               </Li>
             ) : (
-            ''
+              ''
             )}
           </Ul>
         </Nav>

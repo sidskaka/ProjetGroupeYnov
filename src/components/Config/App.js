@@ -8,6 +8,7 @@ import Signup from '../Signup';
 import Logout from '../Logout';
 import Error from '../Error';
 import Favoris from '../Favoris'
+import PrivateRoute from '../PrivateRoute'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Header />
           <Switch>
               <Route exact path="/" component={Accueil} />
-              <Route path="/favoris" component={Favoris} />
+              <PrivateRoute path="/favoris" component={Favoris} /> 
               <Route path="/login" component={login} />
               <Route path="/signup" component={Signup} />
               <Route path="/logout" component={Logout} />

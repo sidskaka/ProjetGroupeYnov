@@ -15,7 +15,6 @@ const Logout = () => {
 }
 
 export default Logout
-
 /**import { FirebaseContext } from '../Firebase'
 import { useContext } from 'react'
 import { useHistory } from 'react-router-dom'

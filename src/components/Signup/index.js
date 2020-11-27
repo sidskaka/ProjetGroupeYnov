@@ -37,7 +37,8 @@ const Signup = () => {
 
     const { email, password } = submit
 
-    firebase.signupCustomer(email, password)
+    firebase
+      .signupCustomer(email, password)
       .then(user => {
         console.log(user.user.refreshToken)
         setSubmit({ ...data })
@@ -62,9 +63,7 @@ const Signup = () => {
         Connexion
       </SigninButton>
     ) : (
-      <SigninButton type='submit'>
-        Connexion
-      </SigninButton>
+      <SigninButton type='submit'>Connexion</SigninButton>
     )
 
   const Error = error !== '' && <StyledError>{error.message}</StyledError>
@@ -106,10 +105,8 @@ const Signup = () => {
           placeholder='Password confirmed'                    
           type='password'
         />
-
         {Error}
         {submitButton}
-
       </StyledForm>
       <Div1>
         <A href='/login'>Deja membre ? Veuillez-vous connecter</A>

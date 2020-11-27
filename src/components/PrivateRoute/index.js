@@ -14,9 +14,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
           <Redirect to='/'></Redirect>
         )
       }}
-    >
-
-    </Route>
+    ></Route>
   )
 }
 

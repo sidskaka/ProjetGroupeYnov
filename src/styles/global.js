@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 //import pixelscreen from "../utils/pixelscreen";
 
 export const Global = createGlobalStyle`
@@ -7,7 +7,6 @@ export const Global = createGlobalStyle`
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
- 
-`;
+`
 
-export default Global;
+export default Global

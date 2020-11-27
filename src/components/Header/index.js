@@ -43,9 +43,7 @@ const Header = () => {
     <a title='Déconnexion' onClick={handleClick}>
       <Img1 src={logout} />
     </a>
-  )
-  :
-  (
+  ) : (
     <a title='Connexion' href='/login'>
       <Img1 src={login} />
     </a>
@@ -72,9 +70,7 @@ const Header = () => {
               <Li>
                 <A href='/favoris'>FAVORIS</A>
               </Li>
-            )
-            :
-            (
+            ) : (
             ''
             )}
           </Ul>

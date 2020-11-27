@@ -31,8 +31,8 @@ const Accueil = () => {
   const indexOfLastArticle = currentPage * articlesPerPage
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage
   const currentArticles = articles.slice(
-      indexOfFirstArticle,
-      indexOfLastArticle
+    indexOfFirstArticle,
+    indexOfLastArticle
   )
 
   // Change page
@@ -43,15 +43,13 @@ const Accueil = () => {
     <Div>
       <Global />
       {PageLoading}
-      <div>                
-
+      <div>               
         <Articles articles={currentArticles} />
         <Pagination
           articlesPerPage={articlesPerPage}
           totalArticles={articles.length}
           paginate={paginate}
         />
-
       </div>
     </Div>
   )

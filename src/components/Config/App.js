@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={Accueil} />
-        <PrivateRoute path='/favoris' component={Favoris} /> 
+        <PrivateRoute path='/favoris' component={Favoris} />
         <Route path='/login' component={login} />
         <Route path='/signup' component={Signup} />
         <Route path='/logout' component={Logout} />
@@ -27,4 +27,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

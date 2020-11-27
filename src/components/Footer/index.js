@@ -33,7 +33,7 @@ const Footer = () => {
           <Div3>
             <H6>About</H6>
             <P1>
-              Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to
+              Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
               help the upcoming programmers with the code. Scanfcode focuses on
               providing the most efficient code or snippets as the code wants to
               be simple. We will help programmers build up concepts in different
@@ -89,7 +89,7 @@ const Footer = () => {
         </Div11>
         <Hr />
       </Div1>
-    
+
       <Div6>
         <Div2>
           <Div21>
@@ -98,15 +98,32 @@ const Footer = () => {
 
           <Div22>
             <Ul2>
-              <Li2><A1 className='facebook' href='#'><i className='fa fa-facebook'></i></A1></Li2>
-              <Li2><A2 className='twitter' href='#'><i className='fa fa-twitter'></i></A2></Li2>
-              <Li2><A3 className='dribbble' href='#'><i className='fa fa-dribbble'></i></A3></Li2>
-              <Li2><A4 className='linkedin' href='#'><i className='fa fa-linkedin'></i></A4></Li2>
+              <Li2>
+                <A1 className='facebook' href='#'>
+                  <i className='fa fa-facebook'></i>
+                </A1>
+              </Li2>
+              <Li2>
+                <A2 className='twitter' href='#'>
+                  <i className='fa fa-twitter'></i>
+                </A2>
+              </Li2>
+              <Li2>
+                <A3 className='dribbble' href='#'>
+                  <i className='fa fa-dribbble'></i>
+                </A3>
+              </Li2>
+              <Li2>
+                <A4 className='linkedin' href='#'>
+                  <i className='fa fa-linkedin'></i>
+                </A4>
+              </Li2>
             </Ul2>
           </Div22>
+
         </Div2>
       </Div6>
-    </MyFooter> 
+    </MyFooter>
   )
 }
 

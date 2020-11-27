@@ -8,10 +8,10 @@ export const Div1 = styled.div`
   width: 50%;
   margin-top: 4%;
   margin-left: -10%;
-  @media only screen and (max-width:1500px) {
+  @media only screen and (max-width: 1500px) {
     margin-left: 8%;
   }
-  @media only screen and (max-width:1400px) {
+  @media only screen and (max-width: 1400px) {
     margin-left: 8%;
   }
 `
@@ -28,7 +28,7 @@ export const Img = styled.img`
   width: 100%;
   margin-left: 98%;
   margin-top: -27%;
-  @media only screen and (max-width:1540px) {
+  @media only screen and (max-width: 1540px) {
     margin-left: 20%;
     margin-top: 0%;
   }

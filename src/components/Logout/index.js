@@ -6,16 +6,12 @@ const Logout = () => {
   const history = useHistory()
   const firebase = useContext(FirebaseContext)
 
-  useEffect(() => {        
+  useEffect(() => {
     firebase.signoutCustomer()
     localStorage.removeItem('token')
     history.push('/')
   })
-  return (
-    <div>
-      Logout
-    </div>    
-  )
+  return <div> Logout </div>
 }
 
 export default Logout

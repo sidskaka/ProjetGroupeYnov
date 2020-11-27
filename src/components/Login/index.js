@@ -26,14 +26,17 @@ const Login = () => {
 
   const handleChange = e => {
     setSubmit({
-      ...submit, [e.target.id]: e.target.value
+      ...submit,
+      [e.target.id]: e.target.value
     })
   }
 
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const { email, password } = submit
+    const {
+      email, password
+    } = submit
 
     firebase.loginCustomer(email, password)
       .then(user => {
@@ -50,17 +53,19 @@ const Login = () => {
       })
   }
 
-  const { email, password } = submit
+  const {
+    email, password
+  } = submit
 
   const submitButton = email === '' || password === '' ? (
     <SigninButton type='submit' disabled>
       Connexion
     </SigninButton>
-    ) : (
-      <SigninButton type='submit'>
-        Connexion
-      </SigninButton>
-    )
+  ) : (
+    <SigninButton type='submit'>
+      Connexion
+    </SigninButton>
+  )
 
   const Error = error !== '' && <StyledError>{error.message}</StyledError>
 

@@ -43,7 +43,8 @@ const Header = () => {
     <a title='Déconnexion' onClick={handleClick}>
       <Img1 src={logout} />
     </a>
-  ) :
+  )
+  :
   (
     <a title='Connexion' href='/login'>
       <Img1 src={login} />
@@ -71,9 +72,11 @@ const Header = () => {
               <Li>
                 <A href='/favoris'>FAVORIS</A>
               </Li>
-             ) : (
-               ''
-             )}
+            )
+            :
+            (
+            ''
+            )}
           </Ul>
         </Nav>
       </Div2>
@@ -81,7 +84,7 @@ const Header = () => {
         <Input type='text' placeholder='Search...' />
         <I className='fa fa-search' aria-hidden='true'></I>
       </Div3>
-      <Div4>{ button }</Div4>
+      <Div4>{button}</Div4>
     </Div>
   )
 }

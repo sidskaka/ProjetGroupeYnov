@@ -30,9 +30,7 @@ export const Div4 = styled.div`
   float: left;
   width: 20%;
 `
-export const Nav = styled.nav`
-
-`
+export const Nav = styled.nav``
 export const Ul = styled.ul`
   margin-top: 4%;
 `
@@ -77,7 +75,8 @@ export const Input = styled.input`
   color: inherit;
   padding: 8px 50px 8px 13px;
   margin: 0 70px 0 0;
-  transition: background 0.15s,color 0.35s 0.5s;
+  transition: background 0.15s;
+  color 0.35s 0.5s;
 `
 export const I = styled.i`
   margin-left: -31%;

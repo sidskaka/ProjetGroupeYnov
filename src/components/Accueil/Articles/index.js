@@ -1,6 +1,22 @@
-import React from 'react';
+import React from 'react'
 import axios from 'axios'
-import { Div21, Img, Div1, Li, Ul, A1, I, P, Div23, Div2, A, H5, Div22, Div231, Div232 } from './style'
+import {
+    Div21,
+    Img,
+    Div1,
+    Li,
+    Ul,
+    A1,
+    I,
+    P,
+    Div23,
+    Div2,
+    A,
+    H5,
+    Div22,
+    Div231,
+    Div232
+} from './style'
 
 const favorisClick = id => {
   localStorage.setItem('id', id)

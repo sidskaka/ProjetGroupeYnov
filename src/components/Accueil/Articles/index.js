@@ -34,38 +34,43 @@ const favorisClick = id => {
 }
 
 const Recipes = ({ articles }) => {
-    return (
-        <Ul>
-            {articles.map(article => (
-                <Li key={article.id}>
-                    <Div1>
-                        <A1 href="#">
-                            <Img src={article.image} alt={article.image} />
-                        </A1>
-                    </Div1>
-                    <Div2>
-                        <Div21>
-                            <H5>{article.title.substr(0, 15)}...</H5>
-                        </Div21>
-                        <Div23>
-                            {
-                                localStorage.getItem('token') ?
-                                    <div>
-                                        <Div231><A onClick={ () => favorisClick(article.id) }><I className="fa fa-heart"></I></A></Div231>
-                                        <Div232><A href="#"><I className="fa fa-shopping-basket"></I></A></Div232>
-                                    </div> : ""
-                            }
+  return (
+    <Ul>
+      {articles.map(article => (
+        <Li key={article.id}>
+          <Div1>
+            <A1 href='#'>
+              <Img src={article.image} alt={article.image} />
+            </A1>
+          </Div1>
+          <Div2>
+            <Div21>
+              <H5>{article.title.substr(0, 15)}...</H5>
+            </Div21>
+            <Div23>
+              {localStorage.getItem('token') ? (
+                <div>
+                  <Div231>
+                    <A onClick={() => favorisClick(article.id)}>
+                      <I className="fa fa-heart"></I>
+                    </A>
+                  </Div231>
+                  <Div232>
+                    <A href="#">
+                      <I className="fa fa-shopping-basket"></I>
+                    </A>
+                  </Div232>
+                </div>) : ("")
+              }
+            </Div23>
+            <Div22>
+              <P>{article.description.substr(0, 100)}...</P>
+            </Div22>
+          </Div2>
+        </Li>
+      ))}
+    </Ul>
+  )
+}
 
-                        </Div23>
-                        <Div22>
-                            <P>{article.description.substr(0, 100)}...</P>
-                        </Div22>
-                    </Div2>
-                </Li>
-            ))}
-
-        </Ul>
-    );
-};
-
-export default Recipes;
+export default Recipes

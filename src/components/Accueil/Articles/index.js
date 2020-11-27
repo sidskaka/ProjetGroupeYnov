@@ -52,16 +52,16 @@ const Recipes = ({ articles }) => {
                 <div>
                   <Div231>
                     <A onClick={() => favorisClick(article.id)}>
-                      <I className="fa fa-heart"></I>
+                      <I className='fa fa-heart'></I>
                     </A>
                   </Div231>
                   <Div232>
-                    <A href="#">
-                      <I className="fa fa-shopping-basket"></I>
+                    <A href='#'>
+                      <I className='fa fa-shopping-basket'></I>
                     </A>
                   </Div232>
-                </div>) : ("")
-              }
+                </div>
+              ) : ("")}
             </Div23>
             <Div22>
               <P>{article.description.substr(0, 100)}...</P>

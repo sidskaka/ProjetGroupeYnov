@@ -17,20 +17,23 @@ const Accueil = () => {
       method: 'GET',
       url: 'https://fakestoreapi.com/products'
     })
-    .then(res => {
-      setLoading(false)
-      setArticles(res.data)
-    })
-    .catch(err => {
-      setLoading(true)
-      console.log(err)
-    })
+      .then(res => {
+        setLoading(false)
+        setArticles(res.data)
+      })
+      .catch(err => {
+        setLoading(true)
+        console.log(err)
+      })
   }, [])
 
   // Get current posts
   const indexOfLastArticle = currentPage * articlesPerPage
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage
-  const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle)
+  const currentArticles = articles.slice(
+      indexOfFirstArticle,
+      indexOfLastArticle
+  )
 
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber)
@@ -40,10 +43,14 @@ const Accueil = () => {
     <Div>
       <Global />
       {PageLoading}
-      <div>
-                
+      <div>                
+
         <Articles articles={currentArticles} />
-        <Pagination articlesPerPage={articlesPerPage} totalArticles={articles.length} paginate={paginate} />
+        <Pagination
+          articlesPerPage={articlesPerPage}
+          totalArticles={articles.length}
+          paginate={paginate}
+        />
 
       </div>
     </Div>

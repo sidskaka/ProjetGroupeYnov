@@ -61,7 +61,9 @@ const Recipes = ({ articles }) => {
                     </A>
                   </Div232>
                 </div>
-              ) : ('')}
+              ) : (
+                ''
+              )}
             </Div23>
             <Div22>
               <P>{article.description.substr(0, 100)}...</P>

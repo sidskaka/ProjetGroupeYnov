@@ -22,7 +22,7 @@ export const Ul = styled.ul`
 export const A = styled.a`
   position: relative;
   display: block;
-  padding: .5rem .75rem;
+  padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
   color: #007bff;

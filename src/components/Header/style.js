@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export const ButtonSwitchContainer = styled.button`
+background-color: #e7e7e7; 
+color: black; 
+`
+
 export const Div = styled.div`
     width: 100%;
     height: 85px;

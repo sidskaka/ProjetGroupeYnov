@@ -107,10 +107,19 @@ export const Button = styled.button`
 `
 export const Div231 = styled.div`
     width: 19%;
-    background-color: #ccc;
+    background-color: #cccccc61;
     height: 39px;
     border-radius: 19px;
-    margin-left: 40%;
+    margin-left: 27%;
+`
+export const Div232 = styled.div`
+    float: left;
+    width: 19%;
+    background-color: #cccccc61;
+    height: 39px;
+    border-radius: 19px;
+    margin-left: 56%;
+    margin-top: -15%;
 `
 export const Div23 = styled.div`
     @media only screen and (min-width : 480px) {

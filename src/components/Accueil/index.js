@@ -5,6 +5,7 @@ import Articles from './Articles'
 import Pagination from './Pagination'
 
 const Accueil = () => {
+    
     const [articles, setArticles] = useState([])
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
@@ -25,7 +26,7 @@ const Accueil = () => {
             console.log(err)
         })
     }, [])
-    console.log(articles)
+    //console.log(articles)
 
     // Get current posts
     const indexOfLastArticle = currentPage * articlesPerPage;

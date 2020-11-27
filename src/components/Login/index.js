@@ -33,8 +33,10 @@ const Login = () => {
             .then(user => {
                 console.log(user)
                 setSubmit({ ...data })
+                console.log(user)
                 localStorage.setItem('token', user.user.refreshToken)
                 history.push('/')
+                location.reload()
             })
             .catch(err => {
                 console.log(err)

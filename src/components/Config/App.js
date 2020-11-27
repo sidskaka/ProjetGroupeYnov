@@ -7,6 +7,7 @@ import login from '../../screens/login';
 import Signup from '../Signup';
 import Logout from '../Logout';
 import Error from '../Error';
+import Favoris from '../Favoris'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Header />
           <Switch>
               <Route exact path="/" component={Accueil} />
+              <Route exact path="/favoris" component={Favoris} />
               <Route path="/login" component={login} />
               <Route path="/signup" component={Signup} />
               <Route path="/logout" component={Logout} />

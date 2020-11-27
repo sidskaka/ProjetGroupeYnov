@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
 export const Div = styled.div`
-  margin-left: '7%';
+  margin-left: '9%';
 `

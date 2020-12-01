@@ -23,6 +23,7 @@ import { FirebaseContext } from '../Firebase'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../globalStyles'
 import { lightTheme, darkTheme } from '../Themes'
+import i18n from 'i18next'
 
 const Header = () => {
   const history = useHistory()
@@ -75,7 +76,7 @@ const Header = () => {
                   <button onClick={themeToggler}>{oldTheme}</button>
                 </Li>
                 <Li>
-                  <A href='/'>ACCUEIL</A>
+                  <A href='/'>{i18n.t('accueil')}</A>
                 </Li>
                 <Li>
                   <A href='#'>A PROPOS</A>

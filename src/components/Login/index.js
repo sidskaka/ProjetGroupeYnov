@@ -11,6 +11,7 @@ import {
 } from './style'
 import { useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
+import i18n from 'i18next'
 
 const Login = () => {
   const history = useHistory()

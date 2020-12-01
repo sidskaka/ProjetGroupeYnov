@@ -6,7 +6,7 @@ export const MyFooter = styled.footer`
   font-size: 15px;
   line-height: 24px;
   color: #737373;
-  margin-top: 4%;
+  margin-top: 0%;
   height: 330px;
   @media only screen and (max-width: 1199px) {
     height: 340px;
@@ -262,7 +262,7 @@ export const Li2 = styled.li`
   display: inline-block;
   margin-bottom: 4px;
   @media only screen and (max-width: 767px) {
-    display: block;
+    display: inline;
     margin-right: 0;
     font-weight: 600;
   }

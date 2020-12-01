@@ -3,7 +3,12 @@ import axios from 'axios'
 import Global from '../../styles/global'
 import Articles from './Articles'
 import Pagination from './Pagination'
-import { Div } from './style.js'
+import { Div, Img, Div1, Div2, A, Div21 } from './style.js'
+import Chatbot from '../Chatbot'
+import chatbot from '../../images/chatbot.png'
+import ReactNotification from 'react-notifications-component'
+import { store } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 const Accueil = () => {
   const [articles, setArticles] = useState([])
@@ -12,6 +17,22 @@ const Accueil = () => {
   const [articlesPerPage] = useState(8)
 
   useEffect(() => {
+    if(!localStorage.getItem('token')){
+      store.addNotification({
+        title: "Information!",
+        message: "Pensez a vous connecter pour avoir plus d'options.",
+        type: "info",
+        insert: "top",
+        container: "top-center",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 7000,
+          onScreen: true
+        }
+      });
+    }
+
     setLoading(true)
     axios({
       method: 'GET',
@@ -19,6 +40,7 @@ const Accueil = () => {
     })
       .then(res => {
         setLoading(false)
+        console.log(res.data)
         setArticles(res.data)
       })
       .catch(err => {
@@ -40,10 +62,12 @@ const Accueil = () => {
 
   const PageLoading = loading ? <h1>Chargement de la page ...</h1> : ''
   return (
-    <Div className='teste1'>
+    <Div>
       <Global />
+      <ReactNotification />
       {PageLoading}
-      <div className='teste'>
+
+      <div>
         <Articles articles={currentArticles} />
         <Pagination
           articlesPerPage={articlesPerPage}
@@ -51,6 +75,18 @@ const Accueil = () => {
           paginate={paginate}
         />
       </div>
+      <Div1>
+        <a href="#popup1">
+          <Img src={ chatbot } />
+        </a>
+      </Div1>
+
+      <Div2 id="popup1">
+        <Div21>
+          <A href="#">&times;</A>
+          <Chatbot />
+        </Div21>
+      </Div2>
     </Div>
   )
 }

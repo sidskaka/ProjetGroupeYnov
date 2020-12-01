@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+export const A1 = styled.a`
+    margin-left: 20%;
+`
 export const ButtonSwitchContainer = styled.button`
 background-color: #e7e7e7; 
 color: black; 
@@ -24,6 +27,7 @@ export const Div3 = styled.div`
   float: left;
   width: 20%;
   margin-top: 20px;
+  margin-left: -5%;
   @media only screen and (max-width: 890px) {
     float: left;
     width: 56%;
@@ -43,7 +47,7 @@ export const Li = styled.li`
   display: inline;
   text-decoration: none;
   liste-style: none;
-  margin-left: 10%;
+  margin-left: 5%;
 `
 export const A = styled.a`
   font-weight: 700;
@@ -63,7 +67,7 @@ export const A = styled.a`
 `
 export const Img = styled.img`
   width: 50%;
-  margin-left: 32%;
+  margin-left: 42%;
   @media only screen and (max-width: 890px) {
     margin-top: 14%;
   }
@@ -73,6 +77,7 @@ export const Input = styled.input`
   height: 35px;
   border-radius: 15px;
   border: 0px solid;
+  margin-left: 18%;
 
   visibility: visible;
   background: #f5f5f5;

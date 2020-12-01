@@ -11,6 +11,7 @@ import {
 } from './style'
 import { FirebaseContext } from '../Firebase'
 import { useHistory } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Signup = () => {
   const history = useHistory()
@@ -25,6 +26,7 @@ const Signup = () => {
 
   const [submit, setSubmit] = useState(data)
   const [error, setError] = useState('')
+  const [t, i18n] = useTranslation()
 
   const handleChange = e => {
     setSubmit({
@@ -44,6 +46,7 @@ const Signup = () => {
         setSubmit({ ...data })
         localStorage.setItem('token', user.user.refreshToken)
         history.push('/')
+        location.reload()
       })
       .catch(err => {
         console.log(err)
@@ -73,12 +76,12 @@ const Signup = () => {
   return (
     <Div>
       <StyledForm onSubmit={handleSubmit}>
-        <StyledSpan>Sign up</StyledSpan>
+        <StyledSpan>{t('enregistrer')}</StyledSpan>
         <SigninInput
           id='username'
           value={username}
           onChange={handleChange}
-          placeholder='Username'
+          placeholder={t('nomutilisateur')}
           type='text'
         />
 
@@ -94,7 +97,7 @@ const Signup = () => {
           id='password'
           value={password}
           onChange={handleChange}
-          placeholder='Password'
+          placeholder={t('motdepasse')}
           type='password'
         />
 
@@ -102,14 +105,14 @@ const Signup = () => {
           id='passwordConfirm'
           value={passwordConfirm}
           onChange={handleChange}
-          placeholder='Password confirmed'
+          placeholder={t('motdepasseconf')}
           type='password'
         />
         {Error}
         {submitButton}
       </StyledForm>
       <Div1>
-        <A href='/login'>Deja membre ? Veuillez-vous connecter</A>
+        <A href='/login'>{t('lienenregistrer')}</A>
       </Div1>
     </Div>
   )

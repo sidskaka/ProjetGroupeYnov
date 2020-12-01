@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-//import pixelscreen from "../utils/pixelscreen";
 
 export const Global = createGlobalStyle`
+  body {
+    width: 99%;
+  }
   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

@@ -14,7 +14,7 @@ export const Nav = styled.nav`
 `
 export const Ul = styled.ul`
   margin-right: -1%;
-  padding-left: 41.5%;
+  padding-left: 46.5%;
   display: flex;
   list-style: none;
   border-radius: 0.25rem;

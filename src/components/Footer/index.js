@@ -24,29 +24,24 @@ import {
   Div22,
   Div11
 } from './style'
-
-import ExampleDBPedia from '../Chatbot/index'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const [t, i18n] = useTranslation()
   return (
     <MyFooter>
       <Div1>
         <Div11>
-          <ExampleDBPedia />
+
           <Div3>
-            <H6>About</H6>
+            <H6>{t('apropos')}</H6>
             <P1>
-              Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
-              help the upcoming programmers with the code. Scanfcode focuses on
-              providing the most efficient code or snippets as the code wants to
-              be simple. We will help programmers build up concepts in different
-              programming languages that include C, C++, Java, HTML, CSS,
-              Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.
+              {t('textapropos')}
             </P1>
           </Div3>
 
           <Div4>
-            <H6>Categories</H6>
+            <H6>{t('categories')}</H6>
             <Ul1>
               <Li1>
                 <A href=''>C</A>
@@ -70,7 +65,7 @@ const Footer = () => {
           </Div4>
 
           <Div5>
-            <H6>Quick Links</H6>
+            <H6>{t('lienrapides')}</H6>
             <Ul1>
               <Li1>
                 <A href=''>About Us</A>

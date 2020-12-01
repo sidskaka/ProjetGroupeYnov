@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Accueil from '../Accueil'
 import Header from '../Header'
 import Footer from '../Footer'
-import login from '../../screens/login'
+import Login from '../Login'
 import Signup from '../Signup'
-import Logout from '../Logout'
 import Error from '../Error'
 import Favoris from '../Favoris'
 import PrivateRoute from '../PrivateRoute'
+import './translations.js'
 
 function App() {
   return (
@@ -17,9 +17,8 @@ function App() {
       <Switch>
         <Route exact path='/' component={Accueil} />
         <PrivateRoute path='/favoris' component={Favoris} />
-        <Route path='/login' component={login} />
+        <Route path='/login' component={Login} />
         <Route path='/signup' component={Signup} />
-        <Route path='/logout' component={Logout} />
         <Route component={Error} />
       </Switch>
       <Footer />

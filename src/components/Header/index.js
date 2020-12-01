@@ -12,13 +12,17 @@ import {
   Img,
   Input,
   I,
-  Img1
+  Img1,
+  A1
 } from './style.js'
+import en from '../../images/en.png'
+import fr from '../../images/fr.png'
 import logo from '../../images/logo.png'
 import login from '../../images/login.png'
 import logout from '../../images/logout.png'
 import { useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
+import { useTranslation } from 'react-i18next'
 
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../globalStyles'
@@ -29,6 +33,7 @@ const Header = () => {
   const firebase = useContext(FirebaseContext)
 
   const [stateLocal, setStateLocal] = useState(false)
+  const [t, i18n] = useTranslation()
 
   const handleClick = () => {
     firebase.signoutCustomer()
@@ -44,20 +49,20 @@ const Header = () => {
   })
 
   const button = stateLocal ? (
-    <a title='D�connexion' onClick={handleClick}>
+    <A1 title='D�connexion' onClick={handleClick}>
       <Img1 src={logout} />
-    </a>
+    </A1>
   ) : (
-    <a title='Connexion' href='/login'>
+    <A1 title='Connexion' href='/login'>
       <Img1 src={login} />
-    </a>
+    </A1>
   )
 
   const [theme, setTheme] = useState('light')
-  const [oldTheme, setOldTheme] = useState('Dark')
+  const [oldTheme, setOldTheme] = useState('SOMBRE')
   const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-    oldTheme === 'dark' ? setOldTheme('light') : setOldTheme('dark')
+    theme === 'light' ? setTheme('SOMBRE') : setTheme('light')
+    oldTheme === 'SOMBRE' ? setOldTheme('LUMIERE') : setOldTheme('SOMBRE')
   }
 
   return (
@@ -72,20 +77,20 @@ const Header = () => {
               <>
                 <GlobalStyles />
                 <Li>
-                  <button onClick={themeToggler}>{oldTheme}</button>
+                  <A onClick={themeToggler}><i style={{fontSize: "132%"}} class="fa fa-lightbulb-o"></i></A>
                 </Li>
                 <Li>
-                  <A href='/'>ACCUEIL</A>
+                  <A href='/'>{t('accueil')}</A>
                 </Li>
                 <Li>
-                  <A href='#'>A PROPOS</A>
+                  <A href='#'>{t('apropos')}</A>
                 </Li>
                 <Li>
-                  <A href='#'>CONTACT</A>
+                  <A href='#'>{t('contact')}</A>
                 </Li>
                 {localStorage.getItem('token') ? (
                   <Li>
-                    <A href='/favoris'>FAVORIS</A>
+                    <A href='/favoris'>{t('favoris')}</A>
                   </Li>
                 ) : (
                   ''
@@ -96,10 +101,14 @@ const Header = () => {
         </Nav>
       </Div2>
       <Div3>
-        <Input type='text' placeholder='Search...' />
+        <Input type='text' placeholder={t('recherche')} />
         <I className='fa fa-search' aria-hidden='true'></I>
       </Div3>
-      <Div4>{button}</Div4>
+      <Div4>
+        <a onClick={() => { i18n.changeLanguage('fr') }}><img style={{ width: "10%" }} src={fr} /></a>&nbsp;&nbsp;
+        <a onClick={() => { i18n.changeLanguage('en') }}><img style={{ width: "28px" }} src={en} /></a>
+        {button}
+      </Div4>
     </Div>
   )
 }

@@ -1,0 +1,20 @@
+{
+  "translation": {
+    "accueil": "HOME",
+    "apropos": "ABOUT",
+    "contact": "CONTACT",
+    "favoris": "FAVORITES",
+    "categories": "CATEGORIES",
+    "lienrapides": "QUICK LINKS",
+    "recherche": "search...",
+    "textapropos": "Scanfcode.com CODE WANTS TO BE SIMPLE is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.",
+
+    "inscription": "New ? Subscribe now",
+    "connexion": "Sign in",
+    "enregistrer": "Sign up",
+    "nomutilisateur": "Username",
+    "motdepasse": "Password",
+    "motdepasseconf": "Password confirmed",
+    "lienenregistrer": "Already a member ? Please log in"
+  }
+}

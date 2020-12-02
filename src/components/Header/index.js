@@ -81,7 +81,7 @@ const Header = () => {
                 <GlobalStyles />
                 <Li>
                   <A onClick={themeToggler}>
-                    <I2 class="fa fa-lightbulb-o"></I2>
+                    <I2 class='fa fa-lightbulb-o'></I2>
                   </A>
                 </Li>
                 <Li>
@@ -110,10 +110,18 @@ const Header = () => {
         <I className='fa fa-search' aria-hidden='true'></I>
       </Div3>
       <Div4>
-        <a onClick={() => { i18n.changeLanguage('fr') }}>
+        <a 
+          onClick={() => {
+            i18n.changeLanguage('fr')
+          }}
+        >
           <Img2 src={fr} />
         </a>&nbsp;&nbsp;
-        <a onClick={() => { i18n.changeLanguage('en') }}>
+        <a
+          onClick={() => { 
+            i18n.changeLanguage('en')
+          }}
+        >
           <Img3 src={en} />
         </a>
         {button}

@@ -49,7 +49,7 @@ export const A = styled.a`
   text-decoration: none;
   color: #333;
   &:hover {
-    color: #06d85F;
+    color: #06d85f;
   }
 `
 export const Div21 = styled.div`

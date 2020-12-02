@@ -28,7 +28,7 @@ const Favoris = () => {
       url: `https://fakestoreapi.com/products/${id}`
     })
       .then(res => {
-        console.log(res.data.description.substr(0, 120),"...")
+        //console.log(res.data.description.substr(0, 120),'...')
         setArticle(res.data)
       })
       .catch(err => {

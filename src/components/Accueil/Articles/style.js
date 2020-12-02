@@ -41,7 +41,7 @@ export const A2 = styled.a`
   text-decoration: none;
   color: #333;
   &:hover {
-    color: #06d85F;
+    color: #06d85f;
     text-decoration: none;
   }
 `

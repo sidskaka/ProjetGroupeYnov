@@ -110,15 +110,16 @@ const Header = () => {
         <I className='fa fa-search' aria-hidden='true'></I>
       </Div3>
       <Div4>
-        <a 
+        <a
           onClick={() => {
             i18n.changeLanguage('fr')
           }}
         >
           <Img2 src={fr} />
-        </a>&nbsp;&nbsp;
+        </a>
+        &nbsp;&nbsp;
         <a
-          onClick={() => { 
+          onClick={() => {
             i18n.changeLanguage('en')
           }}
         >

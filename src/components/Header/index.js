@@ -81,7 +81,7 @@ const Header = () => {
                 <Li>
                   <A onClick={themeToggler}>
                     <i
-                      style={{fontSize: '132%'}}
+                      style={{ fontSize: '132%' }}
                       className='fa fa-lightbulb-o'
                     ></i>
                   </A>

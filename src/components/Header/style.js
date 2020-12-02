@@ -162,9 +162,9 @@ export const Img1 = styled.img`
     width: 35%;
   }
 `
-export const I2 = styled.i`
+/**export const I2 = styled.i`
   font-size: 132%;
-`
+`*/
 export const Img2 = styled.img`
   width: 10%;
 `

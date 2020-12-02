@@ -14,7 +14,6 @@ import {
   I,
   Img1,
   A1,
-  I2,
   Img2,
   Img3
 } from './style.js'
@@ -81,7 +80,7 @@ const Header = () => {
                 <GlobalStyles />
                 <Li>
                   <A onClick={themeToggler}>
-                    <I2 class='fa fa-lightbulb-o'></I2>
+                    <i style={{fontSize: '132%'}} class='fa fa-lightbulb-o'></i>
                   </A>
                 </Li>
                 <Li>

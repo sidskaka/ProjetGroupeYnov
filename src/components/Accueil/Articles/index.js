@@ -30,7 +30,6 @@ import {
 // eslint-disable-next-line react/prop-types
 const Recipes = ({ articles }) => {
   const [articlepopup, setArticlepopup] = useState([])
-  let [favoriteId] = useState([])
 
   const popupFunc = id => {
     axios({
@@ -47,9 +46,8 @@ const Recipes = ({ articles }) => {
   }
 
   const favorisClick = id => {
-      favoriteId.push(id)
+    localStorage.setItem('id', id)
   }
-  console.log(favoriteId)
 
   return (    
     <>

@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 export const A1 = styled.a`
-    margin-left: 20%;
+  margin-left: 20%;
 `
 export const ButtonSwitchContainer = styled.button`
-background-color: #e7e7e7; 
-color: black; 
+  background-color: #e7e7e7;
+  color: black;
 `
-
 export const Div = styled.div`
   width: 100%;
   height: 85px;
@@ -162,4 +161,13 @@ export const Img1 = styled.img`
     margin-top: 12%;
     width: 35%;
   }
+`
+export const I2 = styled.i`
+  font-size: 132%;
+`
+export const Img2 = styled.img`
+  width: 10%;
+`
+export const Img3 = styled.img`
+  width: 28px;
 `

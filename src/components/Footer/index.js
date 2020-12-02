@@ -27,17 +27,14 @@ import {
 import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
-  const [t, i18n] = useTranslation()
+  const [t] = useTranslation()
   return (
     <MyFooter>
       <Div1>
         <Div11>
-
           <Div3>
             <H6>{t('apropos')}</H6>
-            <P1>
-              {t('textapropos')}
-            </P1>
+            <P1>{t('textapropos')}</P1>
           </Div3>
 
           <Div4>

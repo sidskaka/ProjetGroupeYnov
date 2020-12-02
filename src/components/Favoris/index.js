@@ -1,6 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Div, Ul, Li, Div1, A1, Img, Div2, Div21, H5, Div23, Div231, A, I, Div232, Div22, P } from './style.js'
+import {
+  Div,
+  Ul,
+  Li,
+  Div1,
+  A1,
+  Img,
+  Div2,
+  Div21,
+  H5,
+  Div23,
+  Div231,
+  A,
+  I,
+  Div232,
+  Div22,
+  P
+} from './style.js'
 
 const Favoris = () => {
   const [article, setArticle] = useState([])
@@ -8,7 +25,7 @@ const Favoris = () => {
   useEffect(() => {
     axios({
       method: 'GET',
-      url: `https://fakestoreapi.com/products/${id}`  
+      url: `https://fakestoreapi.com/products/${id}`
     })
       .then(res => {
         console.log(res.data.description.substr(0, 120),"...")
@@ -20,7 +37,7 @@ const Favoris = () => {
   }, [])
 
   return (
-    <div> 
+    <div>
       <Div>
         <div>
           <Ul>
@@ -37,7 +54,7 @@ const Favoris = () => {
                 <Div23>
                   <div>
                     <Div231>
-                      <A href="#article">
+                      <A href='#article'>
                         <I className='fa fa-eye'></I>
                       </A>
                     </Div231>

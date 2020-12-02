@@ -17,20 +17,20 @@ const Accueil = () => {
   const [articlesPerPage] = useState(8)
 
   useEffect(() => {
-    if(!localStorage.getItem('token')){
+    if (!localStorage.getItem('token')) {
       store.addNotification({
-        title: "Information!",
+        title: 'Information!',
         message: "Pensez a vous connecter pour avoir plus d'options.",
-        type: "info",
-        insert: "top",
-        container: "top-center",
-        animationIn: ["animate__animated", "animate__fadeIn"],
-        animationOut: ["animate__animated", "animate__fadeOut"],
+        type: 'info',
+        insert: 'top',
+        container: 'top-center',
+        animationIn: ['animate__animated', 'animate__fadeIn'],
+        animationOut: ['animate__animated', 'animate__fadeOut'],
         dismiss: {
           duration: 7000,
           onScreen: true
         }
-      });
+      })
     }
 
     setLoading(true)
@@ -76,14 +76,14 @@ const Accueil = () => {
         />
       </div>
       <Div1>
-        <a href="#popup1">
-          <Img src={ chatbot } />
+        <a href='#popup1'>
+          <Img src={chatbot} />
         </a>
       </Div1>
 
-      <Div2 id="popup1">
+      <Div2 id='popup1'>
         <Div21>
-          <A href="#">&times;</A>
+          <A href='#'>&times;</A>
           <Chatbot />
         </Div21>
       </Div2>

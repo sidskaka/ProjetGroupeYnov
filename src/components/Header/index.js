@@ -1,19 +1,22 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {
-    Div,
-    Div1,
-    Div2,
-    Div3,
-    Div4,
-    Nav,
-    Ul,
-    Li,
-    A,
-    Img,
-    Input,
-    I,
-    Img1,
-    A1
+  Div,
+  Div1,
+  Div2,
+  Div3,
+  Div4,
+  Nav,
+  Ul,
+  Li,
+  A,
+  Img,
+  Input,
+  I,
+  Img1,
+  A1,
+  I2,
+  Img2,
+  Img3
 } from './style.js'
 import en from '../../images/en.png'
 import fr from '../../images/fr.png'
@@ -29,88 +32,94 @@ import { GlobalStyles } from '../globalStyles'
 import { lightTheme, darkTheme } from '../Themes'
 
 const Header = () => {
-    const history = useHistory()
-    const firebase = useContext(FirebaseContext)
+  const history = useHistory()
+  const firebase = useContext(FirebaseContext)
 
-    const [stateLocal, setStateLocal] = useState(false)
-    const [t, i18n] = useTranslation()
+  const [stateLocal, setStateLocal] = useState(false)
+  const [t, i18n] = useTranslation()
 
-    const handleClick = () => {
-        firebase.signoutCustomer()
-        localStorage.removeItem('token')
-        history.push('/')
-        history.go(0)
+  const handleClick = () => {
+    firebase.signoutCustomer()
+    localStorage.removeItem('token')
+    history.push('/')
+    history.go(0)
+  }
+
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      setStateLocal(true)
     }
+  })
 
-    useEffect(() => {
-        if (localStorage.getItem('token')) {
-            setStateLocal(true)
-        }
-    })
+  const button = stateLocal ? (
+    <A1 title='D�connexion' onClick={handleClick}>
+      <Img1 src={logout} />
+    </A1>
+  ) : (
+    <A1 title='Connexion' href='/login'>
+      <Img1 src={login} />
+    </A1>
+  )
 
-    const button = stateLocal ? (
-        <A1 title='D�connexion' onClick={handleClick}>
-            <Img1 src={logout} />
-        </A1>
-    ) : (
-            <A1 title='Connexion' href='/login'>
-                <Img1 src={login} />
-            </A1>
-        )
+  const [theme, setTheme] = useState('light')
+  const [oldTheme, setOldTheme] = useState('SOMBRE')
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('SOMBRE') : setTheme('light')
+    oldTheme === 'SOMBRE' ? setOldTheme('LUMIERE') : setOldTheme('SOMBRE')
+  }
 
-    const [theme, setTheme] = useState('light')
-    const [oldTheme, setOldTheme] = useState('SOMBRE')
-    const themeToggler = () => {
-        theme === 'light' ? setTheme('SOMBRE') : setTheme('light')
-        oldTheme === 'SOMBRE' ? setOldTheme('LUMIERE') : setOldTheme('SOMBRE')
-    }
-
-    return (
-        <Div>
-            <Div1>
-                <Img src={logo} />
-            </Div1>
-            <Div2>
-                <Nav>
-                    <Ul>
-                        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-                            <>
-                                <GlobalStyles />
-                                <Li>
-                                    <A onClick={themeToggler}><i style={{ fontSize: "132%" }} class="fa fa-lightbulb-o"></i></A>
-                                </Li>
-                                <Li>
-                                    <A href='/'>{t('accueil')}</A>
-                                </Li>
-                                <Li>
-                                    <A href='#'>{t('apropos')}</A>
-                                </Li>
-                                <Li>
-                                    <A href='#'>{t('contact')}</A>
-                                </Li>
-                                {localStorage.getItem('token') ? (
-                                    <Li>
-                                        <A href='/favoris'>{t('favoris')}</A>
-                                    </Li>
-                                ) : (
-                                        ''
-                                    )}
-                            </>
-                        </ThemeProvider>
-                    </Ul>
-                </Nav>
-            </Div2>
-            <Div3>
-                <Input type='text' placeholder={t('recherche')} />
-                <I className='fa fa-search' aria-hidden='true'></I>
-            </Div3>
-            <Div4>
-                <a onClick={() => { i18n.changeLanguage('fr') }}><img style={{ width: "10%" }} src={fr} /></a>&nbsp;&nbsp;
-        <a onClick={() => { i18n.changeLanguage('en') }}><img style={{ width: "28px" }} src={en} /></a>
-                {button}
-            </Div4>
-        </Div>
-    )
+  return (
+    <Div>
+      <Div1>
+        <Img src={logo} />
+      </Div1>
+      <Div2>
+        <Nav>
+          <Ul>
+            <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+              <>
+                <GlobalStyles />
+                <Li>
+                  <A onClick={themeToggler}>
+                    <I2 class="fa fa-lightbulb-o"></I2>
+                  </A>
+                </Li>
+                <Li>
+                  <A href='/'>{t('accueil')}</A>
+                </Li>
+                <Li>
+                  <A href='#'>{t('apropos')}</A>
+                </Li>
+                <Li>
+                  <A href='#'>{t('contact')}</A>
+                </Li>
+                {localStorage.getItem('token') ? (
+                  <Li>
+                    <A href='/favoris'>{t('favoris')}</A>
+                  </Li>
+                ) : (
+                  ''
+                )}
+              </>
+            </ThemeProvider>
+          </Ul>
+        </Nav>
+      </Div2>
+      <Div3>
+        <Input type='text' placeholder={t('recherche')} />
+        <I className='fa fa-search' aria-hidden='true'></I>
+      </Div3>
+      <Div4>
+        <a onClick={() => { i18n.changeLanguage('fr') }}>
+          <Img2 src={fr} />
+        </a>&nbsp;&nbsp;
+        <a onClick={() => { i18n.changeLanguage('en') }}>
+          <Img3 src={en} />
+        </a>
+        {button}
+      </Div4>
+    </Div>
+  )
 }
 
 export default Header

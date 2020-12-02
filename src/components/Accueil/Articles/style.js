@@ -41,7 +41,7 @@ export const A2 = styled.a`
   text-decoration: none;
   color: #333;
   &:hover {
-    color: #06D85F;
+    color: #06d85F;
     text-decoration: none;
   }
 `
@@ -76,7 +76,7 @@ export const Div = styled.div`
 export const Div233 = styled.div`
   width: 40%;
   margin: 0 auto;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 35px;
   border: 2px solid #fff;
   border-radius: 20px/50px;

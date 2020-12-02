@@ -4,7 +4,8 @@ import ChatBot from 'react-simple-chatbot'
 
 const ExampleDBPedia = () => {
   return (
-    <ChatBot style={{ marginLeft: '-5%', marginTop: '-5%' }}
+    <ChatBot
+      style={{ marginLeft: '-5%', marginTop: '-5%' }}
       headerTitle='Speech Recognition'
       recognitionEnable={true}
       steps={[

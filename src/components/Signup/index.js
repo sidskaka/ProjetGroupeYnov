@@ -26,7 +26,7 @@ const Signup = () => {
 
   const [submit, setSubmit] = useState(data)
   const [error, setError] = useState('')
-  const [t, i18n] = useTranslation()
+  const [t] = useTranslation()
 
   const handleChange = e => {
     setSubmit({

@@ -126,7 +126,7 @@ export const Div232 = styled.div`
 export const Div233 = styled.div`
   width: 40%;
   margin: 0 auto;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 35px;
   border: 2px solid #fff;
   border-radius: 20px/50px;

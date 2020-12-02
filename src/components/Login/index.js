@@ -11,7 +11,7 @@ import {
 } from './style'
 import { useHistory } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 const Login = () => {
   const history = useHistory()
@@ -24,7 +24,7 @@ const Login = () => {
 
   const [submit, setSubmit] = useState(data)
   const [error, setError] = useState('')
-  const [t, i18n] = useTranslation()
+  const [t] = useTranslation()
 
   const handleChange = e => {
     setSubmit({
@@ -71,12 +71,11 @@ const Login = () => {
 
   return (
     <Div>
-          
       <StyledForm onSubmit={handleSubmit}>
         <StyledSpan>{t('connexion')}</StyledSpan>
         <SigninInput
           id='email'
-          placeholder="email"
+          placeholder='email'
           value={email}
           onChange={handleChange}
           type='email'

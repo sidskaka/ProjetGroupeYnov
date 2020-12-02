@@ -26,7 +26,6 @@ import {
   Img1
 } from './style'
 
-
 // eslint-disable-next-line react/prop-types
 const Recipes = ({ articles }) => {
   const [articlepopup, setArticlepopup] = useState([])
@@ -49,11 +48,11 @@ const Recipes = ({ articles }) => {
     localStorage.setItem('id', id)
   }
 
-  return (    
+  return (
     <>
-      <Div id="article">
+      <Div id='article'>
         <Div11>
-          <A2 href="#">&times;</A2>
+          <A2 href='#'>&times;</A2>
           <Div111>
             <Img1 src={articlepopup.image} alt={articlepopup.image} />
             <H1>{articlepopup.title}</H1>
@@ -89,7 +88,7 @@ const Recipes = ({ articles }) => {
                   </div>
                 ) : (
                   <Div233>
-                    <A href="#article" onClick={() => popupFunc(article.id)}>
+                    <A href='#article' onClick={() => popupFunc(article.id)}>
                       <I className='fa fa-eye'></I>
                     </A>
                   </Div233>

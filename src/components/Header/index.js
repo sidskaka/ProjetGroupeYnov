@@ -80,7 +80,10 @@ const Header = () => {
                 <GlobalStyles />
                 <Li>
                   <A onClick={themeToggler}>
-                    <i style={{fontSize: '132%'}} class='fa fa-lightbulb-o'></i>
+                    <i
+                      style={{fontSize: '132%'}}
+                      className='fa fa-lightbulb-o'
+                    ></i>
                   </A>
                 </Li>
                 <Li>

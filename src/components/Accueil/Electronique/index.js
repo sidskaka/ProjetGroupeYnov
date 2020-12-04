@@ -9,11 +9,10 @@ const Electronics = () => {
   const [articles, setArticles] = useState([])
   let electronics = []
   const [loading, setLoading] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage] = useState(1)
   const [articlesPerPage] = useState(8)
 
   useEffect(() => {
-
     axios({
       method: 'GET',
       url: `https://fakestoreapi.com/products/`
@@ -28,9 +27,9 @@ const Electronics = () => {
   }, [])
 
   for (var i = 0, j = 0; i < articles.length; i++) {
-    if (articles[i].category === "electronics") {
-      electronics[j] = articles[i];
-      j++;
+    if (articles[i].category === 'electronics') {
+      electronics[j] = articles[i]
+      j++
     }
   }
 

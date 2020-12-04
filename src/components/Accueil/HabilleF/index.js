@@ -9,7 +9,7 @@ const WomenClothing = () => {
   const [articles, setArticles] = useState([])
   let womenClothing = []
   const [loading, setLoading] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage] = useState(1)
   const [articlesPerPage] = useState(8)
 
   useEffect(() => {
@@ -27,9 +27,9 @@ const WomenClothing = () => {
   }, [])
 
   for (var i = 0, j = 0; i < articles.length; i++) {
-    if (articles[i].category === "women clothing") {
-      womenClothing[j] = articles[i];
-      j++;
+    if (articles[i].category === 'women clothing') {
+      womenClothing[j] = articles[i]
+      j++
     }
   }
 

@@ -9,27 +9,27 @@ const MenClothing = () => {
   const [articles, setArticles] = useState([])
   let menClothing = []
   const [loading, setLoading] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage] = useState(1)
   const [articlesPerPage] = useState(8)
 
   useEffect(() => {
     axios({
       method: 'GET',
-        url: `https://fakestoreapi.com/products/`
+      url: `https://fakestoreapi.com/products/`
+    })
+      .then(res => {
+        setArticles(res.data)
+        setLoading(false)
       })
-        .then(res => {
-          setArticles(res.data)
-          setLoading(false)
-        })
-        .catch(err => {
-          console.log(err)
-        })
+      .catch(err => {
+        console.log(err)
+      })
   }, [])
 
   for (var i = 0, j = 0; i < articles.length; i++) {
-    if (articles[i].category === "men clothing") {
-      menClothing[j] = articles[i];
-      j++;
+    if (articles[i].category === 'men clothing') {
+      menClothing[j] = articles[i]
+      j++
     }
   }
 
@@ -37,7 +37,7 @@ const MenClothing = () => {
   const indexOfLastArticle = currentPage * articlesPerPage
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage
   const currentArticles = menClothing.slice(
-  indexOfFirstArticle,
+    indexOfFirstArticle,
     indexOfLastArticle
   )
 

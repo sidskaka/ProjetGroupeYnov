@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 import {
   Div,
   Ul,
@@ -14,14 +13,13 @@ import {
   Div231,
   A,
   I,
-  Div232,
   Div22,
   P
 } from './style.js'
 
 const Favoris = () => {
   const favorisarticles = localStorage.getItem('favorisarticles')
-  var monobjet = JSON.parse(favorisarticles);
+  var monobjet = JSON.parse(favorisarticles)
   console.log(monobjet)
 
   return (
@@ -29,7 +27,7 @@ const Favoris = () => {
       <Div>
         <div>
           <Ul>
-            {monobjet.map(objet =>
+            {monobjet.map(objet => (
               <Li key={objet.id}>
                 <Div1>
                   <A1 href='#'>
@@ -54,7 +52,7 @@ const Favoris = () => {
                   </Div22>
                 </Div2>
               </Li>
-            )}
+            ))}
           </Ul>
         </div>
       </Div>

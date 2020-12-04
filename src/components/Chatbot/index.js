@@ -1,9 +1,8 @@
 /* eslint-disable react/no-deprecated */
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import ChatBot from 'react-simple-chatbot'
 
 const ExampleDBPedia = () => {
-
   return (
     <ChatBot
       style={{ marginLeft: '-5%', marginTop: '-5%' }}
@@ -34,9 +33,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='/electronics'>
-                electronics
-              </a>{' '}
+              <a href='/electronics'>electronics</a>{' '}
             </div>
           ),
           trigger: '2'
@@ -46,9 +43,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='/bijoux'>
-                jewelery
-              </a>{' '}
+              <a href='/bijoux'>jewelery</a>{' '}
             </div>
           ),
           trigger: '2'
@@ -58,9 +53,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='/menclothing'>
-                women clothing
-              </a>{' '}
+              <a href='/menclothing'>women clothing</a>{' '}
             </div>
           ),
           trigger: '2'
@@ -70,9 +63,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='/womenclothing'>
-                electronics
-              </a>{' '}
+              <a href='/womenclothing'>electronics</a>{' '}
             </div>
           ),
           trigger: '2'

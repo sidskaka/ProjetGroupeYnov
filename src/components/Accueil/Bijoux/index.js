@@ -9,11 +9,10 @@ const Accueil = () => {
   const [articles, setArticles] = useState([])
   let bijoux = []
   const [loading, setLoading] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage] = useState(1)
   const [articlesPerPage] = useState(8)
 
   useEffect(() => {
-
     axios({
       method: 'GET',
       url: `https://fakestoreapi.com/products/`
@@ -27,20 +26,17 @@ const Accueil = () => {
       })
   }, [])
 
-  for (var i = 0, j=0; i < articles.length; i++) {
-    if (articles[i].category === "jewelery") {
-      bijoux[j] = articles[i];
-      j++;
+  for (var i = 0, j = 0; i < articles.length; i++) {
+    if (articles[i].category === 'jewelery') {
+      bijoux[j] = articles[i]
+      j++
     }
-  } 
+  }
 
   // Get current posts
   const indexOfLastArticle = currentPage * articlesPerPage
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage
-  const currentArticles = bijoux.slice(
-    indexOfFirstArticle,
-    indexOfLastArticle
-  )
+  const currentArticles = bijoux.slice(indexOfFirstArticle, indexOfLastArticle)
 
   const PageLoading = loading ? <h1>Chargement de la page ...</h1> : ''
   return (

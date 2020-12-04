@@ -44,8 +44,29 @@ const Recipes = ({ articles }) => {
       })
   }
 
+  var monarticle = [];
+
   const favorisClick = id => {
-    localStorage.setItem('id', id)
+    var idarticle = {};
+    axios({
+      method: 'GET',
+      url: `https://fakestoreapi.com/products/${id}`
+    })
+      .then(res => {
+        var id = res.data.id
+        var description = res.data.description
+        var image = res.data.image
+        var title = res.data.title
+        idarticle = {"id":id, "description":description, "image":image, "title":title}
+        monarticle.push(idarticle)
+        var monobjet_json = JSON.stringify(monarticle);
+
+        localStorage.setItem('favorisarticles', monobjet_json)
+        console.log(monarticle)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   return (

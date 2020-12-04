@@ -1,8 +1,9 @@
 /* eslint-disable react/no-deprecated */
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import ChatBot from 'react-simple-chatbot'
 
 const ExampleDBPedia = () => {
+
   return (
     <ChatBot
       style={{ marginLeft: '-5%', marginTop: '-5%' }}
@@ -33,7 +34,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='https://lucasbassetti.com.br/react-simple-chatbot/#/docs/chatbot'>
+              <a href='/electronics'>
                 electronics
               </a>{' '}
             </div>
@@ -45,7 +46,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='https://lucasbassetti.com.br/react-simple-chatbot/#/docs/chatbot'>
+              <a href='/bijoux'>
                 jewelery
               </a>{' '}
             </div>
@@ -57,7 +58,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='https://lucasbassetti.com.br/react-simple-chatbot/#/docs/chatbot'>
+              <a href='/menclothing'>
                 women clothing
               </a>{' '}
             </div>
@@ -69,7 +70,7 @@ const ExampleDBPedia = () => {
           component: (
             <div>
               {' '}
-              <a href='https://lucasbassetti.com.br/react-simple-chatbot/#/docs/chatbot'>
+              <a href='/womenclothing'>
                 electronics
               </a>{' '}
             </div>

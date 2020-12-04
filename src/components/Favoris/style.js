@@ -10,7 +10,7 @@ export const Ul = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-left: 34%;
+  margin-left: 11%;
 `
 export const Li = styled.li`
   display: inline-block;
@@ -30,8 +30,7 @@ export const Li = styled.li`
     width: 24.25%;
   }
   @media only screen and (min-width: 1200px) {
-    width: 37.5%;
-    height: auto;
+    width: 32.5%;
   }
 `
 export const Div1 = styled.div`
@@ -91,6 +90,7 @@ export const H5 = styled.h5`
   }
 `
 export const Div23 = styled.div`
+  padding-bottom: 7%;
   @media only screen and (min-width: 480px) {
     float: left;
     text-align: center;
@@ -99,11 +99,11 @@ export const Div23 = styled.div`
   }
 `
 export const Div231 = styled.div`
-  width: 15%;
+  width: 25%;
   background-color: #cccccc61;
   height: 36px;
   border-radius: 19px;
-  margin-left: 27%;
+  margin-left: 42%;
 `
 export const A = styled.a`
   text-decoration: none;
